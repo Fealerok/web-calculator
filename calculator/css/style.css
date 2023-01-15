@@ -9,6 +9,7 @@ body{
     font-size: 30px;
     font-family: 'Roboto Condensed', sans-serif;
     font-weight: bold;
+    height: 120px;
 }
 
 .main_block{
@@ -77,7 +78,42 @@ body{
     
 }
 
-.btn-3, .btn_4-6, .btn_7-9, .operators, .other_btn{
+.btn-0-3, .btn_4-7, .btn_8--, .operators{
     display: flex;
     justify-content: space-around;
+}
+
+.reload_button{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 0 auto;
+    width: 350px;
+    height: 150px;
+}
+
+.reload_button p{
+    text-align: center;
+    font-size: 30px;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.reload_button button{
+    font-size: 30px;
+    padding: 0px 20px;
+    font-family: 'Roboto Condensed', sans-serif;
+    background-color: orange;
+    border-radius: 50px;
+    transition-duration: 0.1s;
+}
+
+.reload_button button:hover{
+    transform: scale(1.1, 1.1);
+    box-shadow: 0 0 30px orange;
+}
+
+.reload_button button:active{
+    box-shadow: 0 0 10px orange;
+    transform: scale(1.2, 1.2);
+    box-shadow: 0 0 30px orange;
 }

@@ -3,66 +3,80 @@ let result = []
 let sum = 0;
 let num = 0;
 let index2;
-
+const values = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"]
 let isMultiply = false;
 let isDivision = false;
+let length_str = 0;
 
 let resultSpan = document.getElementById("result");
 
 document.addEventListener("click", function(event){
-    if (event.target.value in ["1", "2", "3", "4", "5", "6", "7", "8", "9"]){
-        result.push(event.target.value)
-        resultSpan.textContent = result.join("");
+    if (event.target.value == "reload"){
+        location.reload();
+    }
+    length_str++;
+    if (length_str < 16){
+        if (values.includes(event.target.value)){
+            result.push(event.target.value)
+            resultSpan.textContent = result.join("");
+            console.log(result);
+        }
     }
 
     if (event.target.value == "+"){
+        length_str = 0;
         array.push(result.join(""))
         result = []
         array.push("+")
     }
 
     if (event.target.value == "+" && array.length == 1){
+        length_str = 0;
         array.shift()
         result.splice(1, 1)
     }
 
     if (event.target.value == "-"){
-        result.splice(1, 1)
+        length_str = 0;
         array.push(result.join(""))
         array.push("-")
         result = []
     }
 
     if (event.target.value == "-" && array.length == 1){
+        length_str = 0;
         result.splice(1, 1)
         array.shift()
     }
 
     if (event.target.value == "*"){
-        result.splice(1, 1)
+        length_str = 0;
         array.push(result.join(""))
         array.push("*")
         result = []
     }
 
     if (event.target.value == "*" && array.length == 1){
+        length_str = 0;
         result.splice(1, 1)
         array.shift()
     }
 
     if (event.target.value == "/"){
-        result.splice(1, 1)
+        length_str = 0;
         array.push(result.join(""))
         array.push("/")
         result = []
     }
 
     if (event.target.value == "/" && array.length == 1){
+        length_str = 0;
         result.splice(1, 1)
         array.shift()
     }
 
     if (event.target.value == "clear"){
+        length_str = 0;
         result = []
         sum = 0;
         num = 0;
@@ -73,6 +87,7 @@ document.addEventListener("click", function(event){
     }
 
     if (event.target.value == "="){
+        length_str = 0;
         array.push(result.join(""))
         result = []
 
@@ -155,19 +170,19 @@ document.addEventListener("click", function(event){
             }
 
         }
-        
-        resultSpan.textContent = array[0]
+        //показ результата
+        resultSpan.textContent = array[0].substring(0, 15);
         array.shift()
 
         if (array.length == 3){
             if (array[1] == "+"){
-                resultSpan.textContent = String(Number(array[0]) + Number(array[2]))
+                resultSpan.textContent = String(Number(array[0]) + Number(array[2])).substring(0, 5);
             }
         }
 
         if (array.length == 3){
             if (array[1] == "-"){
-                resultSpan.textContent = String(Number(array[0]) + Number(array[2]))
+                resultSpan.textContent = String(Number(array[0]) + Number(array[2])).substring(0, 5);
             }
         }
 
