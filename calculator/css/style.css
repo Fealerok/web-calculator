@@ -1,0 +1,74 @@
+body{
+    background: url(../img/bg.jpg);
+}
+
+.main_block{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 400px;
+    height: 700px;
+    border: 1px solid black;
+    margin: 0 auto;
+    background-color:grey;
+    margin-top: 100px;
+    border-radius: 50px;
+}
+
+.block_name{
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 30px;
+    background-color: black;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+    height: 50px;
+    border-top-right-radius: 50px;
+    border-top-left-radius: 50px;
+}
+.block_result{
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    height: 150px;
+    border: 1px solid black;
+    background-color: wheat;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+}
+
+.block_result #result{
+    font-size: 50px;
+    margin-top: 50px;
+}
+
+.block_buttons{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 400px;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+}
+
+.block_buttons button{
+    font-size: 60px;
+    padding-right: 30px;
+    padding-left: 30px;
+    border-radius: 20px;
+
+}
+
+.block_buttons button:hover{
+    transition-duration: 0.2s;
+    background-color: orange;
+    box-shadow: 0 0 8px orange;
+    
+}
+
+.btn-3, .btn_4-6, .btn_7-9, .operators, .other_btn{
+    display: flex;
+    justify-content: space-around;
+}
