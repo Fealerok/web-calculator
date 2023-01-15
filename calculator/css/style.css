@@ -2,6 +2,15 @@ body{
     background: url(../img/bg.jpg);
 }
 
+.head_text{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-size: 30px;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: bold;
+}
+
 .main_block{
     display: flex;
     flex-direction: column;

@@ -71,6 +71,7 @@ function clearAll(){
     secondNumber = "";
     action = "";
     result.textContent = 0;
+    firstIsWrote = false;
 }
 
 function addSecondNumber(valueNum){
